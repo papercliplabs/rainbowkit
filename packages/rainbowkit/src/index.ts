@@ -9,6 +9,7 @@ export {
   useConnectModal,
 } from './components/RainbowKitProvider/ModalContext';
 export { useAddRecentTransaction } from './transactions/useAddRecentTransaction';
+export { useRecentTransactions } from './transactions/useRecentTransactions';
 export type { Wallet, WalletList } from './wallets/Wallet';
 export type { Chain } from './components/RainbowKitProvider/RainbowKitChainContext';
 export type { Theme } from './components/RainbowKitProvider/RainbowKitProvider';
