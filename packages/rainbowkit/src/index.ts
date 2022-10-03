@@ -10,6 +10,11 @@ export {
 } from './components/RainbowKitProvider/ModalContext';
 export { useRainbowKitChainsById, useRainbowKitChains } from './components/RainbowKitProvider/RainbowKitChainContext';
 export { useAddRecentTransaction } from './transactions/useAddRecentTransaction';
+export { useRecentTransactions } from './transactions/useRecentTransactions';
+export type {
+  Transaction,
+  TransactionStatus,
+} from './transactions/transactionStore';
 export {
   RainbowKitAuthenticationProvider,
   createAuthenticationAdapter,
