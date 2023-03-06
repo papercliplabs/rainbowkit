@@ -1,5 +1,45 @@
 # @rainbow-me/create-rainbowkit
 
+## 0.1.8
+
+### Patch Changes
+
+- 924ae82: Updated `wagmi` to `>=0.11.7`
+
+- cf62d10: Fix next-app template by removing `alchemyProvider` in favor of `publicProvider`
+
+  The `alchemyProvider` public API key provided by Alchemy and the Ethers project has been deprecated. Examples and templates now favor the `publicProvider` exclusively.
+
+## 0.1.7
+
+### Patch Changes
+
+- 1876ba0: Updated `wagmi` to `0.11.x`
+
+## 0.1.6
+
+### Patch Changes
+
+- 355402b: Updated `wagmi` to `0.10.x`
+
+## 0.1.5
+
+### Patch Changes
+
+- a1d6776: Updated `wagmi` to `0.9.x`
+
+## 0.1.4
+
+### Patch Changes
+
+- 6b37050: Updated `wagmi` to `^0.8.4`
+
+## 0.1.3
+
+### Patch Changes
+
+- 0ff4210: Updated wagmi to `0.7.5`
+
 ## 0.1.2
 
 ### Patch Changes

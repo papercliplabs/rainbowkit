@@ -9,12 +9,17 @@ import {
   usePrepareContractWrite,
   useWaitForTransaction,
 } from 'wagmi';
-import contractInterface from '../contract-abi.json';
+import { abi } from '../contract-abi';
 import FlipCard, { BackCard, FrontCard } from '../components/FlipCard';
+import type {
+  UsePrepareContractWriteConfig,
+  UseContractReadConfig,
+  UseContractWriteConfig,
+} from 'wagmi';
 
 const contractConfig = {
-  addressOrName: '0x86fbbb1254c39602a7b067d5ae7e5c2bdfd61a30',
-  contractInterface: contractInterface,
+  address: '0x86fbbb1254c39602a7b067d5ae7e5c2bdfd61a30',
+  abi,
 };
 
 const Home: NextPage = () => {
@@ -27,7 +32,7 @@ const Home: NextPage = () => {
   const { config: contractWriteConfig } = usePrepareContractWrite({
     ...contractConfig,
     functionName: 'mint',
-  });
+  } as UsePrepareContractWriteConfig);
 
   const {
     data: mintData,
@@ -35,13 +40,13 @@ const Home: NextPage = () => {
     isLoading: isMintLoading,
     isSuccess: isMintStarted,
     error: mintError,
-  } = useContractWrite(contractWriteConfig);
+  } = useContractWrite(contractWriteConfig as UseContractWriteConfig);
 
-  const { data: totalSupplyData } = useContractRead({
+  const { data: totalSupplyData }: any = useContractRead({
     ...contractConfig,
     functionName: 'totalSupply',
     watch: true,
-  });
+  } as UseContractReadConfig);
 
   const {
     data: txData,
